@@ -182,8 +182,8 @@
         <type>Email</type>
         <unique>false</unique>
     </fields>
-        <fields>
-        <fullName>Field_Three_c</fullName>
+    <fields>
+        <fullName>Field_Three__c</fullName>
         <encryptionScheme>None</encryptionScheme>
         <externalId>false</externalId>
         <label>Field Three</label>
