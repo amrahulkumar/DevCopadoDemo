@@ -192,6 +192,16 @@
         <type>Email</type>
         <unique>false</unique>
     </fields>
+        <fields>
+        <fullName>Field_Four__c</fullName>
+        <encryptionScheme>None</encryptionScheme>
+        <externalId>false</externalId>
+        <label>Field Four</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
     <validationRules>
         <fullName>DemoValidationRuleOne</fullName>
         <active>true</active>
