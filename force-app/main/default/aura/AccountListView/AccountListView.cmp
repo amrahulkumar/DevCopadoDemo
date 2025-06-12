@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" >
+
+<aura:attribute name="bgColorCodeComplete" type="String" default="#33B615" /> 
+<aura:attribute name="bgColorCodeIncomplete" type="String" default="#33B615" /> 
+<aura:attribute name="bgColorCodeActive" type="String" default="#33B615" />
+<aura:attribute name="bgColorCodeButton" type="String" default="#33B615" />
+<aura:attribute name="isnotview" type="Boolean" default="false" />
+
+	<aura:html tag="style"> 
+    
+    :root { --lwc-colorBackgroundPathComplete:{!v.bgColorCodeComplete} !important; } .slds-path__nav .slds-is-complete { background-color: {!v.bgColorCodeComplete}!important; }
+    :root { --lwc-colorBackgroundPathIncomplete:{!v.bgColorCodeIncomplete} !important; }
+  .slds-path__nav .slds-is-incomplete {
+  background-color: {!v.bgColorCodeIncomplete}!important;
+  }  
+   :root { --lwc-colorBackgroundPathActive:{!v.bgColorCodeActive} !important; }
+  .slds-path__nav .slds-is-active {
+  background-color: {!v.bgColorCodeActive}!important;
+  }  
+  .slds-button--brand{
+  background-color: {!v.bgColorCodeButton}!important;
+  }
+    </aura:html> 
+</aura:component>

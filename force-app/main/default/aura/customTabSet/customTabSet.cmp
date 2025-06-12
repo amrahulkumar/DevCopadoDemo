@@ -1,0 +1,21 @@
+<aura:component>
+    <lightning:tabset>
+        <lightning:tab label="Item One">
+            One Content !
+        </lightning:tab>
+        <lightning:tab label="Item Two" title="2nd tab extended title">
+            Two Content !
+        </lightning:tab>
+        <lightning:tab label="Item Three">
+            Three Content !
+        </lightning:tab>
+    </lightning:tabset>
+
+    <aura:attribute name="quotePageUrl" type="String" default=""/>
+    <div style="float:right;margin-top:-4rem;padding-right:2rem; margin-right: 8rem;">
+        <div style=" ">            
+            <a href="{!v.quotePageUrl}"><lightning:button class="stickyBtn" label="Get a quote" title="Get a quote" />
+            </a> 
+        </div>
+    </div>
+</aura:component>

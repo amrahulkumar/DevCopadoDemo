@@ -1,0 +1,400 @@
+.THIS .IntroDetail{
+    font-size: 32px;
+    line-height: 36px;
+}
+.THIS .RegionHeader{
+    padding-top: 18Px;
+    font-size: 20px;
+    line-height: 28px;
+    
+}
+.THIS .SelectedRegionHeader{
+    color:#5514B4;
+    font-weight:bold;
+     padding-top: 10Px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.THIS .Segment{
+     /*background:#F7F7F7;*/
+}
+.THIS .slds-border_right{
+      border: 4px solid blue;
+}
+.THIS .checkbox{
+   height: 20Px;
+    width: 20Px;
+}
+
+.THIS .TableHeader{
+     font-size: 16px;
+    line-height: 24px;
+}
+.THIS .Width{
+    max-width: 7%;   
+}
+.THIS .SelectedSubHeader{
+     padding-top: 10Px;
+     font-size: 14px;
+    line-height: 28px;
+}
+.THIS .ContinueButton{
+    background:#D4BFEC;
+    --sds-c-button-color--:#D4BFEC;
+    font-size: 16px;
+    line-height: 24px;
+}
+.THIS .AgentWidth{
+    width: 40% !important;
+	text-align: left;
+}
+.THIS .slds-input{
+	width: 100% !important;
+	text-align: left;
+}
+.THIS table tbody td{
+    /*background:#F7F7F7;*/
+    font-size:16px;  
+    padding-top:1rem;
+    padding-bottom:1rem;
+   
+}
+.THIS table thead th {
+    /*background:#F7F7F7;*/
+    color:#000000 !important;
+    font-size:16px; 
+}
+.THIS .slds-listbox li {
+    padding: .45rem 0.7rem !important;
+    display: flex;
+}
+.THIS .verticalAlign {
+	cursor: pointer;
+    padding: 0px 5px !important;
+}
+.THIS .slds-dropdown {
+    padding:0px !important;
+}
+.THIS .recordListBox {
+	margin-top:0px !important;
+	overflow-y: scroll;
+}
+.THIS .eachItem:hover {
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+.THIS .inputIcon {
+	z-index: 99;
+    padding: 2px 0;
+}
+
+/* For Scrolling */
+.THIS ::-webkit-scrollbar {
+    width: 7px;
+    height:7px;
+}
+.THIS ::-webkit-scrollbar-track {
+   display: none !important;
+}
+.THIS ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}
+.THIS .roundpill{
+    border-radius:1rem;
+}
+.THIS .slds-pill__label{
+  padding-left: 0.5rem !important;
+
+}
+
+.THIS .cBT_Global_Hub_CountriesandAgents,.THIS .slds-input {
+    width: 50%!important;
+}
+
+.THIS .flags {
+ height:22px;
+ width :22px;
+}
+
+.THIS .slds-select_container,.THIS .slds-select {
+    font-size: 16px;
+    font-weight: 400;
+	}
+
+
+.THIS .country-style {
+    font-weight: 400;
+    font-size:16px
+}
+.THIS .country-style-bold {
+	font-weight: Bold;
+    font-size:16px
+}
+.THIS .country-style-fontsize {
+    font-size:16px
+}
+.THIS #myInput1 {
+  background-image: url('/sfsites/c/resource/CCNG_Quote_Flags/CCNG_Quote_Flags/search.svg');
+  background-position: 15px 14px;
+  background-repeat: no-repeat;
+  width: 21.6rem;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.THIS #mylist {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: auto;
+  font-size: 16px;
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.THIS #myTable {
+  border-collapse: collapse;
+  width: 100%;
+ /* border: 1px solid #ddd;*/
+  font-size: 14px;
+}
+
+.THIS #myTable th,.THIS #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+.THIS #myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.THIS #myTable tr.header, .THIS #myTable tr:hover {
+  /*background-color: #f1f1f1;*/
+}
+
+.THIS #li a {
+  display: block;
+  text-align: center;
+}
+
+.THIS .data_table {
+    table-layout: fixed; 
+}
+
+.THIS ::placeholder {
+  color: #C8C8C8;
+}
+.THIS .center {
+    text-align: center;
+}
+.THIS .search {
+   padding-left:5.3rem
+}
+.THIS .country-style {
+    font-size:16px;
+}.THIS .IntroDetail{
+    font-size: 32px;
+    line-height: 36px;
+}
+.THIS .RegionHeader{
+    padding-top: 18Px;
+    font-size: 20px;
+    line-height: 28px;
+    
+}
+.THIS .SelectedRegionHeader{
+    color:#5514B4;
+    font-weight:bold;
+     padding-top: 10Px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.THIS .Segment{
+     /*background:#F7F7F7;*/
+}
+.THIS .slds-border_right{
+      border: 4px solid blue;
+}
+.THIS .checkbox{
+   height: 20Px;
+    width: 20Px;
+}
+
+.THIS .TableHeader{
+     font-size: 16px;
+    line-height: 24px;
+}
+.THIS .Width{
+    max-width: 7%;   
+}
+.THIS .SelectedSubHeader{
+     padding-top: 10Px;
+     font-size: 14px;
+    line-height: 28px;
+}
+.THIS .ContinueButton{
+    background:#D4BFEC;
+    --sds-c-button-color--:#D4BFEC;
+    font-size: 16px;
+    line-height: 24px;
+}
+.THIS .AgentWidth{
+    width: 40% !important;
+	text-align: left;
+}
+.THIS .slds-input{
+	width: 100% !important;
+	text-align: left;
+}
+.THIS table tbody td{
+    /*background:#F7F7F7;*/
+    font-size:16px;  
+    padding-top:1rem;
+    padding-bottom:1rem;
+   
+}
+.THIS table thead th {
+    /*background:#F7F7F7;*/
+    color:#000000 !important;
+    font-size:16px; 
+}
+.THIS .slds-listbox li {
+    padding: .45rem 0.7rem !important;
+    display: flex;
+}
+.THIS .verticalAlign {
+	cursor: pointer;
+    padding: 0px 5px !important;
+}
+.THIS .slds-dropdown {
+    padding:0px !important;
+}
+.THIS .recordListBox {
+	margin-top:0px !important;
+	overflow-y: scroll;
+}
+.THIS .eachItem:hover {
+    background-color: #F1F1F1;
+    cursor: pointer;
+}
+.THIS .inputIcon {
+	z-index: 99;
+    padding: 2px 0;
+}
+
+/* For Scrolling */
+.THIS ::-webkit-scrollbar {
+    width: 7px;
+    height:7px;
+}
+.THIS ::-webkit-scrollbar-track {
+   display: none !important;
+}
+.THIS ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}
+.THIS .roundpill{
+    border-radius:1rem;
+}
+.THIS .slds-pill__label{
+  padding-left: 0.5rem !important;
+
+}
+
+.THIS .cBT_Global_Hub_CountriesandAgents,.THIS .slds-input {
+    width: 50%!important;
+}
+
+.THIS .flags {
+ height:22px;
+ width :22px;
+}
+
+.THIS .slds-select_container,.THIS .slds-select {
+    font-size: 16px;
+    font-weight: 400;
+	}
+
+
+.THIS .country-style {
+    font-weight: 400;
+    font-size:16px
+}
+.THIS .country-style-bold {
+	font-weight: Bold;
+    font-size:16px
+}
+.THIS .country-style-fontsize {
+    font-size:16px
+}
+.THIS #myInput1 {
+  background-image: url('/sfsites/c/resource/CCNG_Quote_Flags/CCNG_Quote_Flags/search.svg');
+  background-position: 15px 14px;
+  background-repeat: no-repeat;
+  width: 22rem;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.THIS #mylist {
+  
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: auto;
+  font-size: 16px;
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.THIS #myTable {
+  border-collapse: collapse;
+  width: 100%;
+ /* border: 1px solid #ddd;*/
+  font-size: 14px;
+}
+
+.THIS #myTable th,.THIS #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+.THIS #myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.THIS #myTable tr.header, .THIS #myTable tr:hover {
+  /*background-color: #f1f1f1;*/
+}
+
+.THIS #li a {
+  display: block;
+  text-align: center;
+}
+
+.THIS .data_table {
+    table-layout: fixed; 
+}
+
+.THIS ::placeholder {
+  color: #C8C8C8;
+}
+.THIS .center {
+    text-align: center;
+}
+.THIS .search {
+   padding-left:5.3rem
+}
+.THIS .country-style {
+    font-size:16px;
+}
+.THIS [lightning-input_input-host] {
+    display: flex;
+}

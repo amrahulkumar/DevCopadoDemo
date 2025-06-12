@@ -1,0 +1,21 @@
+<aura:component
+                controller="FileReader"
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+                access="global">
+    <aura:attribute name="data" type="String" />
+    <aura:attribute name="previewUrl" type="String" />
+    <aura:attribute name="urlLink" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="files" type="object[]" />
+    <aura:attribute name="file" type="object" />
+    <aura:attribute name="showFileLink" type="boolean" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" ></aura:handler>
+
+     <aura:iteration items="{!v.files}" var="f">
+       	 <a href="{!'data:' + f.ContentType+';base64,'+f.Content}">Download File</a><br/>
+<!--         <a href="{!f.FileUrl}">Preview File</a><br/>
+         <a href="{!f.DownloadUrl}">Download using Link</a><br/> -->
+    </aura:iteration>
+    
+</aura:component>

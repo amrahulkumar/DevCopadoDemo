@@ -1,0 +1,5 @@
+<aura:component >
+    <input class="slds-input" type="date" id="datemax" name="datemax" min=""
+           max="" value="{!v.result}" />
+    <lightning:button variant="brand" label="Submit" title="Brand action" onclick="{! c.handleClick }" />
+</aura:component>

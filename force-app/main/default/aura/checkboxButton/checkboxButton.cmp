@@ -1,0 +1,29 @@
+<!--<aura:component>
+    <lightning:select name="select1" label="How many tickets?">
+        <option value="1"><lightning:input type="checkbox-button" label="Input One" name="input1"/></option>
+        <option value="2"><lightning:input type="checkbox-button" label="Input Two" name="input2" checked="true"/></option>
+        <option value="3"><lightning:input type="checkbox-button" label="Input Three" name="input3" checked="false" disabled="true"/></option>
+    </lightning:select>    
+</aura:component> -->
+
+<aura:component>
+    <aura:attribute name="items" type="List" default="[
+                {
+                    type: 'avatar',
+                    href: '',
+                    label: 'Avatar Pill',
+                    src: '/docs/component-library/app/images/examples/avatar2.jpg',
+                    fallbackIconName: 'standard:user',
+                    variant: 'circle',
+                    alternativeText: 'User avatar',
+                },
+                {
+                    type: 'icon',
+                    href: '',
+                    label: 'Icon Pill',
+                    iconName: 'standard:account',
+                    alternativeText: 'Account',
+                },
+            ]"/>
+    <p><lightning:pillContainer items="{!v.items}"></lightning:pillContainer></p>
+</aura:component>

@@ -1,0 +1,150 @@
+<aura:component implements="lightning:availableForFlowScreens" access="global" controller="BT_Global_Hub_ICG_Ordering" >
+    
+     <aura:attribute name="counter" default="0" type="integer"/>
+    <aura:attribute name="value" type="List" /> 
+    <aura:attribute name="destinations" type="String[]" />
+    <aura:attribute name="agents" type="String[]" />
+     <aura:attribute name="selectedAgents" type="Integer[]" />
+    <aura:attribute name="totalagents" type="Integer" default="0" />
+    <aura:attribute name="worldregions" type="String" />
+    <aura:attribute name="fullworldregions" type="String[]" default="['Asia-Pacific (APAC)',
+                                                                     'United States vs Canada (USCAN)',
+                                                                     'Europe, Middle East, and Africa (EMEA)',
+                                                                     'Latin America (LATAM)']" />
+    <aura:attribute name="countries" type="String[]" />
+    <aura:attribute name="selectedcountries" type="String[]" />
+    <aura:attribute name="allData" type="String[]" />
+    <aura:attribute name="baseurllist" type="String[]"/>
+    <aura:attribute name="AllCountriesList" type="List" default=""/>
+    <aura:attribute name="enableCheckbox" type="Boolean"/>
+    <aura:attribute name="countryCheck" type="Boolean"/>
+    <aura:attribute name="testing" type="Integer[]"/>
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type='List' default='["", "Country", "Agents"]'/>
+    <aura:attribute name="selectedRowsCount" type="Integer" default="0"/>
+    <aura:attribute name="maxRowSelection" type="Integer" default="5"/>
+    <aura:attribute name="filter" type="String" />
+    <aura:attribute name="agentValue" type="String" />    
+    <aura:attribute name="APAC" type="String[]" />
+    <aura:attribute name="EMEA" type="String[]" />
+    <aura:attribute name="USCAN" type="String[]" />
+    <aura:attribute name="LATM" type="String[]" />
+    <aura:attribute name="tableRegions" type="String[]" default="['APAC','USCAN']"/>    
+    <aura:attribute name="reservedCountries" type="String[]" />
+    <aura:attribute name="reservedAgents" type="String[]" />
+    <aura:attribute name="reservedRegions" type="String[]" />    
+    <aura:attribute name="reservedCheckEvent" type="Boolean" />    
+    <aura:attribute name="APACData" type="String[]" />
+    <aura:attribute name="EUROPEData" type="String[]" />
+    <aura:attribute name="AMERICAData" type="String[]" />
+    <aura:attribute name="MEAData" type="String[]" />    
+    <aura:attribute name="agentregions" type="String[]" />    
+    <aura:attribute name="validate" type="Aura.Action"/>
+	<aura:attribute name="exceptionCountries" type="String[]" default="['Anguilla','Antigua and Barbuda','Bahamas','Benin',
+    'Bermuda','Cayman Islands','Fiji','Guadeloupe','French Guiana','Ghana','Grenada','Guam','Jamaica',
+    'Martinique','Mauritius','Mayotte','Montserrat','Nepal','Netherlands Antilles','Reunion','Saint Kitts and Nevis',
+    'Saint Lucia','Saint Pierre and Miquelon','Saint Vincent and The Grenadines','Saipan','San Marino','Seychelles',
+    'Trinidad and Tobago','Turks and Caicos Islands','Virgin Islands British','Virgin Islands USA']" />    
+    
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>    
+    <aura:attribute name="conagentSelMessage" type="Boolean" default="false" />
+    <aura:attribute name="lessthanthirtyagents" type="Boolean" default="false"/>
+    
+    <aura:attribute name="avail" type="String" default="true" />
+    <aura:attribute name="notavail" type="String" default="false" />
+    
+    <aura:attribute name="selectedorgincons" type="String[]" />
+    <aura:attribute name="selectedtollfree" type="String[]" />
+    <aura:attribute name="selectedsharedcost" type="String[]" />
+    <aura:attribute name="selectedpstn" type="String[]" />
+    <aura:attribute name="selectedregion" type="String[]" />
+    
+    <aura:attribute name="selectedcountriesid" type="String[]" />
+    <aura:attribute name="selconsmasterlabel" type="String[]" />
+    
+    <div style="background:#f7f7f7;padding-top:2rem">
+        <h3 style="font-size:32px;color=#000000;padding-left: 4rem;">Select the number type of origination country.</h3>
+        <br/>
+    </div>
+    
+    
+    <div style="background:#f7f7f7">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="12" largeDeviceSize="12" padding="around-small">
+                <div class="search" style="white-space: nowrap;">
+                    <ul class="slds-list_horizontal">
+                         <li style="font-size: 20px;font-weight: bold;padding-right: 16px;line-height: 3rem;">Select the region:</li>
+                         <li style="padding-right: 8rem;"><select id="mylist" onchange="{!c.getRegionSpecficCountries}">
+                            <option>All</option>
+                            <option>North America</option>
+                            <option>Central America</option>
+                            <option>South America</option>
+                            <option>Europe</option>
+                            <option>Middle East</option>
+                            <option>Africa</option>
+                            <option>Asia</option>
+                            <option>Oceania</option>
+                            </select>
+                        </li>
+                        <li>
+                           <!-- <div class="search">     -->           
+                                <input class="text" type="search" id="myInput1" onkeyup="{!c.searchTable}" placeholder="Search countries" title="Type in a country" />
+                                <!-- <div onkeyup="{! c.searchTable }"><lightning:input aura:id="enter-search" name="enter-search" label="Search when user hits the 'enter' key" type="search"/></div> -->
+                        <!--      </div>      -->           
+                        </li>
+                    </ul>
+                    <br/>
+                </div>
+
+                <br/>
+                <aura:if isTrue="{!v.conagentSelMessage}">
+                    <div class="slds-align_absolute-center">
+                        <span style=" font-size: 15px;color:red;font-weight:700;">&#42; Please select at least one country of interest.</span>
+                        <aura:set attribute="else">
+                        </aura:set>
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.lessthanthirtyagents}">
+                    <div class="slds-align_absolute-center">
+                        <span style=" font-size: 15px;color:red;font-weight:700;">&#42; Cumulative agents count is less than 30. Please add atleast 30 agents and click on continue. </span>
+                        <aura:set attribute="else">
+                        </aura:set>
+                    </div>
+                </aura:if>
+                <br/>
+                  <div class="slds-scrollable_y" style="height:30rem;width:60rem">
+                    <table id="myTable" style="background:#f7f7f7;  margin-left: auto;" class="">
+                    <tr class="header" style="background:#E3E3E3; position: sticky;top: 0;z-index: 1;font-size: 16px">
+               			<th style="width:2%"></th>
+                        <th style="width:16%">Origination country <lightning:helptext content="select orignation country" /></th>
+                        <th style="width:2%"></th>
+                        <th style="width:22%">Toll Free</th>
+                        <th style="width:28%">Shared Cost(inc.National rate)</th>
+                        <th style="width:30%;word-wrap: break-word;">Public Switched Telephone Network (PSTN)/Caller Pays</th>
+                    </tr>
+                    <aura:iteration items="{!v.baseurllist}" var="sorttbl" indexVar = "index">
+                        <tr>
+                            <td style="visibility:hidden;"><ui:inputCheckbox aura:id="master" value="false" change="{!c.captureAgents}"  text="{!sorttbl.Country__c}" /></td>
+                            <td>&nbsp; &nbsp;{!sorttbl.Country__c}</td>
+                            <td style="visibility:hidden;" aura:id="regions">{!sorttbl.Region__c}</td>
+                            <td>
+                                <aura:if isTrue="{!not(empty(sorttbl.ICG_Master_Tollfree__c))}">
+                                    <ui:outputText class="" aura:id="tollfreeid"   	value="{!sorttbl.ICG_Master_Tollfree__c}"/><ui:inputCheckbox 	aura:id="tollfreeyes" 	label="" 	change="{!c.captureAgents}"/>
+                                    <aura:set attribute="else">
+                                        <ui:outputText class="" aura:id="tollfreeid"  value="NA"/>
+                                    </aura:set>
+                                </aura:if> 
+                                
+                            </td>
+                            <td><ui:outputText class="" aura:id="sharedcostid"  	value="{!sorttbl.ICG_Master_Shared_Cost__c}"/><ui:inputCheckbox aura:id="SharedCostyes" label="" 	change="{!c.captureAgents}" /></td>
+                            <td><ui:outputText class="" aura:id="pstnid" 		value="{!sorttbl.ICG_Master_PSTN__c}"/><ui:inputCheckbox 		aura:id="PSTNyes" 		label="" 	change="{!c.captureAgents}" /></td>
+                        </tr>
+                    </aura:iteration>
+                </table>
+                </div>
+            </lightning:layoutItem>           
+        </lightning:layout>
+    </div>
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component>
+    
+    <aura:attribute name="fileShares" type="List" default="[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <a href="#" onclick="{!c.removeShareHandler}" data-idtoremove="{!fileShare.id}"
+       data-index="{!ivar}" />
+    
+    <aura:iteration items="{!v.fileShares}" var="fileShare" indexVar="ivar">
+        <div class="fileSharesItem">
+            <lightning:input
+                             aura:id="{!fileShare.id}"
+                             value="{!fileShare.value}"
+                             label="{!fileShare.label}"
+                             class="fileShares"/>
+        </div>
+    </aura:iteration>
+    
+    
+</aura:component>

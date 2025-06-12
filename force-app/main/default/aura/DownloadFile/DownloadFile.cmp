@@ -1,0 +1,6 @@
+<aura:component controller="FileDownloadController">
+<aura:attribute name="contentDocumentId" type="String" />
+<lightning:button label="Download File" onclick="{!c.downloadFile}" />
+    
+    
+</aura:component>

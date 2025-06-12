@@ -1,0 +1,43 @@
+<aura:component >
+    <ul class="slds-accordion">
+        <li class="slds-accordion__list-item">
+            <section class="slds-accordion__section slds-is-open">
+                <div class="slds-accordion__summary">
+                    <h2 class="slds-accordion__summary-heading">
+                        <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-42" aria-expanded="true" title="Accordion summary">
+                            <lightning:icon iconName="utility:switch" size="x-small" />
+                            <span class="slds-accordion__summary-content">Accordion summary</span>
+                        </button>
+                    </h2>
+                </div>
+                <div class="slds-accordion__content" id="referenceId-42">Accordion details - A</div>
+            </section>
+        </li>
+        <li class="slds-accordion__list-item">
+            <section class="slds-accordion__section">
+                <div class="slds-accordion__summary">
+                    <h2 class="slds-accordion__summary-heading">
+                        <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-43" aria-expanded="false" title="Accordion summary">
+                            <lightning:icon iconName="utility:switch" size="x-small" />
+                            <span class="slds-accordion__summary-content">Accordion summary</span>
+                        </button>
+                    </h2>
+                </div>
+                <div hidden="" class="slds-accordion__content" id="referenceId-43">Accordion details - B</div>
+            </section>
+        </li>
+        <li class="slds-accordion__list-item">
+            <section class="slds-accordion__section">
+                <div class="slds-accordion__summary">
+                    <h2 class="slds-accordion__summary-heading">
+                        <button class="slds-button slds-button_reset slds-accordion__summary-action" aria-controls="referenceId-44" aria-expanded="false" title="Accordion summary">
+                            <lightning:icon iconName="utility:switch" size="x-small" />
+                            <span class="slds-accordion__summary-content">Accordion summary</span>
+                        </button>
+                    </h2>
+                </div>
+                <div hidden="" class="slds-accordion__content" id="referenceId-44">Accordion details - C</div>
+            </section>
+        </li>
+    </ul>
+</aura:component>

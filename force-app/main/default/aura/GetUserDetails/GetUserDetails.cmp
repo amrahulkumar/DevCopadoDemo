@@ -1,0 +1,7 @@
+<aura:component >
+<aura:attribute name="currentUser" type="User"/>
+    <force:recordData aura:id="recordLoader" recordId="{!$SObjectType.CurrentUser.Id}"  fields="Profile.Name,Name,Username" targetFields="{!v.currentUser}"/>
+    Current User : <strong>{!v.currentUser.Name}</strong>
+    Current Profile : <strong>{!v.currentUser.Profile.Name}</strong>
+    User Name : <strong>{!v.currentUser.Username}</strong>
+</aura:component>

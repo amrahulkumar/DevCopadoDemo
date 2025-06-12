@@ -1,0 +1,4 @@
+<aura:component >
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+	<ui:inputCheckbox aura:id="SharedCostyes" label="" disabled="true"	 />
+</aura:component>

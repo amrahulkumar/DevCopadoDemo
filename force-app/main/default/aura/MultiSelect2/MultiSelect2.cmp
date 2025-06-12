@@ -1,0 +1,13 @@
+<aura:component>
+    
+    <aura:attribute name="options" type="List" default="[{'label':'Bob','value':'123'},
+                                                        {'label':'Shubham','value':'234'},
+                                                        {'label':'Chrissey','value':'345'},
+                                                        {'label':'Jessica','value':'456'},
+                                                        {'label':'Sunny','value':'567'}]" />
+    <aura:attribute name="selectedValues" type="List" default="[{'label':'Bob','value':'123'},
+                                                               {'label':'Shubham','value':'234'}]" description="Selected value in Multi Select" />
+    
+    <c:MultiSelect options="{!v.options}" values="{!v.selectedValues}" multiSelect="true" label="Multi Select Combobox"/>
+    
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	    <aura:attribute name="recordId" type="String" />
+    <lightning:flow aura:id="flowData" />
+    <lightning:button variant="brand-outline" label="CANCEL" title="CANCEL" onclick="{!c.handleClick}" />
+</aura:component>

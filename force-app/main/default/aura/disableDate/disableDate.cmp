@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="disabledDates" type="List" default="['2024-01-15', '2024-01-20', '2024-01-25']" />
+    <!-- You can set the disabled dates dynamically in the disabledDates attribute -->
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:input type="date" label="Pick a Date" name="dateField" aura:id="dateField" disabled-dates="{!v.disabledDates}" />
+</aura:component>

@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="tableList" type="List" default="['value 1', 'value 2', 'value 3']"/>
+
+    <aura:iteration items="{!v.tableList}" var="set" indexVar="childindex">   
+        <td>
+            <ui:outputtext class="slds-align_absolute-center" value="{!childindex + 1}"> </ui:outputtext>
+        </td>
+
+        <td>  
+            <div id="{!set}">
+                <lightning:select aura:id="picklist" name="select" label="" onchange="{! c.onHeaderChange }">
+                    <option value="">choose one...</option>
+                    <option value="apple">apple</option>
+                    <option value="pumpkin">pumpkin</option>
+                    <option value="cherry">cherry</option>
+                    <option value="blueberry">blueberry</option>
+                    <option value="pickle">pickle</option>
+                </lightning:select>
+            </div>
+        </td>
+    </aura:iteration>
+</aura:component>

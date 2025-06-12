@@ -1,0 +1,11 @@
+.THIS .slds-button{
+    z-index: 1 !important;
+    background:#FF80FF;
+    color: #000000 !important;
+    border-color:#FF80FF !important;
+    font-size:16px;
+}
+.THIS .stickyBtn{
+    position: fixed;
+    top: 75px;
+}

@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="currentStage" label="currentStage"/>
+    <design:attribute name="Stages" label="Stages"/>
+</design:component>

@@ -1,0 +1,9 @@
+<design:component>
+    <design:attribute name="selectedorgincons" 		Label="Selected Countries" />
+    <design:attribute name="selectedtollfree" 		Label="Selected Toll-free" />
+    <design:attribute name="selectedsharedcost" 	Label="Selected Shared Cost" />
+    <design:attribute name="selectedpstn" 			Label="Selected PSTN" />
+    <design:attribute name="selectedregion" 		Label="Selected Region" />  
+    <design:attribute name="selectedcountriesid" 	Label="Selected Countries IDs" />
+    <design:attribute name="selconsmasterlabel" 	Label="Selected Countries MAster Labels" />
+</design:component>

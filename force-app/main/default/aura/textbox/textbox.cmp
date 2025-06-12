@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="keywords" type="List" />
+    <aura:iteration items="{!v.keywords}" var="item">
+        <lightning:input label="Keyword" data-id="{!item.id}" value="{!item.value}" />
+    </aura:iteration>
+    
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'Ross', 'value': 'option1'},
+                                                        ]"/>
+    <aura:attribute name="value" type="List" default=""/>
+    
+<lightning:input aura:id="ausconnecttype" type="checkbox" label="Is internet?" name="input2" 
+                                                     checked="" onchange = "{!c.auscapturesitenames}" />
+    
+</aura:component>

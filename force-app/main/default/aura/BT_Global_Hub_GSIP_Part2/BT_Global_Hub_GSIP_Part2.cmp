@@ -1,0 +1,77 @@
+<aura:component>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:attribute name="colors" type="Integer[]" default=""/>    
+    <aura:attribute name="options" type="List" default="[
+                                                        {'label': 'Yes', 'value': 'Yes'},
+                                                        {'label': 'No', 'value': 'No'}
+                                                        ]"/>
+    <aura:attribute name="networkresultvalue" type="String" default="option2"/>
+    <aura:attribute name="outbounds" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    <aura:attribute name="Inbounds" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    <aura:attribute name="fixeds" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    <aura:attribute name="mobiles" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    <aura:attribute name="nationals" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    <aura:attribute name="internationals" type="String[]" default="10,20,30,40,50,60,70,80,90,100"/>
+    
+    <h5>Contract Length</h5>
+    <lightning:select name="select" label="Select a contract length" required="false">
+        <aura:iteration items="{!v.colors}" var="color">
+                <option text="{!color}"></option>
+            </aura:iteration>
+    </lightning:select>
+
+	<h5>Network requirements</h5>
+    <lightning:radioGroup aura:id="radioGroup" name="radioGroup"
+                          label="Do you want us to quote for the network as well?"
+                          options="{! v.options }"
+                          value="{! v.networkresultvalue }"
+                          type="radio" onchange="{!c.radioresult}"/>
+    
+    <h5>Call profile setup</h5>
+    
+    <!-- Inbound Outbound -->
+    
+    <lightning:select name="select" label="Outbound" required="false">
+        <aura:iteration items="{!v.outbounds}" var="outbound">
+            <option text="{!outbound}"></option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select name="select" label="Inbound" required="false">
+        <aura:iteration items="{!v.Inbounds}" var="Inbound">
+            <option text="{!Inbound}"></option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <!-- Fixed Mobile -->
+    
+        <lightning:select name="select" label="fixed" required="false">
+        <aura:iteration items="{!v.fixeds}" var="fixed">
+            <option text="{!fixed}"></option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select name="select" label="mobile" required="false">
+        <aura:iteration items="{!v.mobiles}" var="mobile">
+            <option text="{!mobile}"></option>
+        </aura:iteration>
+    </lightning:select>
+ 
+        <!-- National International -->
+    
+        <lightning:select name="select" label="national" required="false">
+        <aura:iteration items="{!v.nationals}" var="national">
+            <option text="{!national}"></option>
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select name="select" label="international" required="false">
+        <aura:iteration items="{!v.internationals}" var="international">
+            <option text="{!international}"></option>
+        </aura:iteration>
+    </lightning:select>
+
+    <lightning:button variant="brand" label="Brand" title="Submit" onclick="{! c.handleClick }" />
+    
+</aura:component>
